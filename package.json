@@ -1,0 +1,30 @@
+{
+  "name": "eslint-plugin-vue-accessibility",
+  "version": "0.0.1",
+  "description": "eslint-plugin-vue-a11y",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
+  ],
+  "author": "vue-a11y",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha tests --recursive"
+  },
+  "files": [
+    "lib"
+  ],
+  "bugs": {
+    "url": "https://github.com/eslint-plugin-vue-accessibility/issues"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "dependencies": {
+    "vue-eslint-parser": "^2.0.3",
+    "eslint-plugin-jsx-a11y": "latest",
+    "eslint": "^3.18.0 || ^4.0.0"
+  },
+  "license": "ISC"
+}
