@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-vue-accessibility",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "eslint-plugin-vue-a11y",
   "keywords": [
     "eslint",
