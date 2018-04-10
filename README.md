@@ -1,4 +1,4 @@
-# eslint-plugin-18
+# eslint-plugin-vue-a11y
 
 a11y
 
@@ -10,22 +10,22 @@ You'll first need to install [ESLint](http://eslint.org):
 $ npm i eslint --save-dev
 ```
 
-Next, install `eslint-plugin-18`:
+Next, install `eslint-plugin-vue-accessibility`:
 
 ```
-$ npm install eslint-plugin-18 --save-dev
+$ npm install eslint-plugin-vue-accessibility --save-dev
 ```
 
-**Note:** If you installed ESLint globally (using the `-g` flag) then you must also install `eslint-plugin-18` globally.
+**Note:** If you installed ESLint globally (using the `-g` flag) then you must also install `eslint-plugin-vue-accessibility` globally.
 
 ## Usage
 
-Add `18` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
+Add `vue-accessibility` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
 
 ```json
 {
     "plugins": [
-        "18"
+        "vue-accessibility"
     ]
 }
 ```
@@ -36,7 +36,7 @@ Then configure the rules you want to use under the rules section.
 ```json
 {
     "rules": {
-        "18/rule-name": 2
+        "eslint-plugin/rule-name": 2
     }
 }
 ```

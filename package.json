@@ -1,22 +1,27 @@
 {
   "name": "eslint-plugin-vue-accessibility",
-  "version": "0.0.2",
-  "description": "eslint-plugin-vue-a11y",
+  "version": "0.0.3",
+  "description": "Static AST checker for accessibility rules on elements in .vue",
   "keywords": [
     "eslint",
     "eslintplugin",
-    "eslint-plugin"
+    "eslint-plugin",
+    "vue",
+    "a11y",
+    "accessibility"
   ],
-  "author": "vue-a11y",
+  "author": "maranran",
   "main": "lib/index.js",
   "scripts": {
-    "test": "mocha tests --recursive"
+    "test": "mocha tests --recursive",
+    "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
   },
+  "homepage": "https://github.com/maranran/eslint-plugin-vue-accessibility#readme",
   "files": [
     "lib"
   ],
   "bugs": {
-    "url": "https://github.com/eslint-plugin-vue-accessibility/issues"
+    "url": "https://github.com/maranran/eslint-plugin-vue-accessibility/issues"
   },
   "engines": {
     "node": ">=4"
@@ -24,7 +29,11 @@
   "dependencies": {
     "vue-eslint-parser": "^2.0.3",
     "eslint-plugin-jsx-a11y": "latest",
-    "eslint": "^3.18.0 || ^4.0.0"
+    "eslint-plugin-vue": "^4.4.0"
+  },
+  "peerDependencies": {
+    "eslint": "^4.0.0"
   },
   "license": "ISC"
 }
+
