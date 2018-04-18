@@ -13,7 +13,7 @@
   "author": "maranran",
   "main": "lib/index.js",
   "scripts": {
-    "test": "mocha tests --recursive",
+    "test": "mocha \"tests/lib/**/*.js\" --reporter dot",
     "lint": "eslint ."
   },
   "homepage": "https://github.com/maranran/eslint-plugin-vue-a11y#readme",
@@ -32,7 +32,9 @@
     "eslint-plugin-vue": "^4.4.0",
     "eslint": "^4.14.0",
     "eslint-plugin-eslint-plugin": "^0.8.0",
-    "aria-query": "^0.7.1"
+    "aria-query": "^0.7.1",
+    "mocha": "^3.2.0",
+    "chai": "^4.1.0"
   },
   "peerDependencies": {
     "eslint": "^4.0.0"

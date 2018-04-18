@@ -11,8 +11,12 @@ Enforce usage of `onBlur` over/in parallel with `onChange` on select menu elemen
 This rule takes no arguments.
 
 ### Succeed
-```jsx
+```jsx or template
 <select onBlur={updateModel}>
+  <option/>
+</select>
+
+<select @blur="updateModel">
   <option/>
 </select>
 
