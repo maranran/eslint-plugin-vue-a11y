@@ -50,4 +50,7 @@ Then configure the rules you want to use under the rules section.
 - [mouse-events-have-key-events](docs/rules/mouse-events-have-key-events.md): Enforce that `onMouseOver`/`onMouseOut` are accompanied by `onFocus`/`onBlur` for keyboard-only users.
 - [no-autofocus](docs/rules/no-autofocus.md): Enforce autoFocus prop is not used.
 - [no-onchange](docs/rules/no-onchange.md): Enforce usage of `onBlur` over `onChange` on select menus for accessibility.
-
+- [tabindex-no-positive](docs/rules/tabindex-no-positive.md): Avoid positive tabIndex property values to synchronize the flow of the page with keyboard tab order.
+- [no-distracting-elements](docs/rules/no-distracting-elements.md): Enforces that no distracting elements are used. Elements that can be visually distracting can cause accessibility issues with visually impaired users. Such elements are most likely deprecated, and should be avoided. By default, the following elements are visually distracting: `<marquee>` and `<blink>`.
+- [heading-has-content](docs/rules/heading-has-content.md): Enforce that heading elements (`h1`, `h2`, etc.) have content and that the content is accessible to screen readers. Accessible means that it is not hidden using the `aria-hidden` prop. Refer to the references to learn about why this is important.
+- [media-has-caption](docs/rules/media-has-caption.md): Providing captions for media is essential for deaf users to follow along. Captions should be a transcription or translation of the dialogue, sound effects, relevant musical cues, and other relevant audio information.
