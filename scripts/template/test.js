@@ -2,7 +2,7 @@ const testBoilerplate = (name) => `
 // -----------------------------------------------------------------------------
 // Requirements
 // -----------------------------------------------------------------------------
-var rule = require('../../../lib/rules/alt-text');
+var rule = require('../../../lib/rules/${name}');
 var RuleTester = require('eslint').RuleTester;
 
 const errorMessage = '';
@@ -17,7 +17,7 @@ var tester = new RuleTester({
   }
 });
 
-RuleTester.run('${name}', rule, {
+tester.run('${name}', rule, {
   valid: [
     { 
       filename: 'test.vue',

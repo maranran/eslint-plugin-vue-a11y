@@ -48,11 +48,11 @@ tester.run('alt-text', rule, {
     },
     {
       filename: 'test.vue',
-      code: '<template><input type="image" alt="This is descriptive!" /></template>'
+      code: '<template><input :type="image" alt="This is descriptive!" /></template>'
     },
     {
       filename: 'test.vue',
-      code: '<template><input  /></template>'
+      code: '<template><input :type="true" /></template>'
     },
     {
       code: `
