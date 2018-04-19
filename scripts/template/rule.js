@@ -14,7 +14,9 @@ const schema = generateObjSchema();
 
 module.exports = {
   meta: {
-    docs: {},
+    docs: {
+      url: 'https://github.com/maranran/eslint-plugin-vue-a11y/blob/master/docs/rules/${name}.md'
+    },
     schema: [schema],
   },
 
