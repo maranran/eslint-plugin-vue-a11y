@@ -41,7 +41,16 @@ Then configure the rules you want to use under the rules section.
     }
 }
 ```
+You can also enable all the base rules at once.
+Add `plugin:vue-a11y/base` in `extends`:
 
+```json
+{
+  "extends": [
+    "plugin:jsx-a11y/base"
+  ]
+}
+```
 ## base Supported Rules
 - [alt-text](docs/rules/alt-text.md): Enforce all elements that require alternative text have meaningful information to relay back to end user.
 - [anchor-has-content](docs/rules/anchor-has-content.md): Enforce all anchors to contain accessible content.
