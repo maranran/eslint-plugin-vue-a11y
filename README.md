@@ -47,7 +47,7 @@ Add `plugin:vue-a11y/base` in `extends`:
 ```json
 {
   "extends": [
-    "plugin:jsx-a11y/base"
+    "plugin:vue-a11y/base"
   ]
 }
 ```
