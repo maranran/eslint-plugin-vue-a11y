@@ -1,6 +1,6 @@
 # eslint-plugin-vue-a11y
 
-Static AST checker for accessibility rules on elements in .vue. it supports <template></template> or JSX
+Static AST checker for accessibility rules on elements in .vue. 
 
 
 ## Installation
