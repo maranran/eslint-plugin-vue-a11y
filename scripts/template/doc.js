@@ -11,12 +11,12 @@ Write a useful explanation here!
 This rule takes no arguments.
 
 ### Succeed
-\`\`\`jsx
+\`\`\`
 <div />
 \`\`\`
 
 ### Fail
-\`\`\`jsx
+\`\`\`
 
 \`\`\`
 `;

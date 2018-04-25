@@ -1,6 +1,6 @@
 # eslint-plugin-vue-a11y
 
-Static AST checker for accessibility rules on elements in .vue. 
+Static AST checker for accessibility rules on elements in .vue.
 
 
 ## Installation
@@ -65,3 +65,12 @@ Add `plugin:vue-a11y/base` in `extends`:
 - [media-has-caption](docs/rules/media-has-caption.md): Providing captions for media is essential for deaf users to follow along. Captions should be a transcription or translation of the dialogue, sound effects, relevant musical cues, and other relevant audio information.
 - [iframe-has-title](docs/rules/iframe-has-title.md): `<iframe>` elements must have a unique title property to indicate its content to the user.
 - [no-access-key](docs/rules/no-access-key.md): Enforce no accessKey prop on element. Access keys are HTML attributes that allow web developers to assign keyboard shortcuts to elements. Inconsistencies between keyboard shortcuts and keyboard commands used by screenreader and keyboard only users create accessibility complications so to avoid complications, access keys should not be used.
+
+## recommended Supported Rules
+
+- [interactive-supports-focus](docs/rules/interactive-supports-focus.md): Elements with an interactive role and interaction handlers (mouse or key press) must be focusable.
+- [aria-role](docs/rules/aria-role.md): Elements with ARIA roles must use a valid, non-abstract ARIA role
+- [aria-props](docs/rules/aria-props.md): Elements cannot use an invalid ARIA attribute.
+- [aria-unsupported-elements](docs/rules/aria-unsupported-elements.md):
+- [no-redundant-roles](docs/rules/no-redundant-roles.md): Certain reserved DOM elements do not support ARIA roles, states and properties.
+- [role-has-required-aria-props](docs/rules/role-has-required-aria-props.md): Elements with ARIA roles must have all required attributes for that role.
