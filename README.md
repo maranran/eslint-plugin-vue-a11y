@@ -51,6 +51,7 @@ Add `plugin:vue-a11y/base` in `extends`:
   ]
 }
 ```
+<!--RULES_START-->
 ## base Supported Rules
 - [alt-text](docs/rules/alt-text.md): Enforce all elements that require alternative text have meaningful information to relay back to end user.
 - [anchor-has-content](docs/rules/anchor-has-content.md): Enforce all anchors to contain accessible content.
@@ -74,3 +75,37 @@ Add `plugin:vue-a11y/base` in `extends`:
 - [aria-unsupported-elements](docs/rules/aria-unsupported-elements.md):
 - [no-redundant-roles](docs/rules/no-redundant-roles.md): Certain reserved DOM elements do not support ARIA roles, states and properties.
 - [role-has-required-aria-props](docs/rules/role-has-required-aria-props.md): Elements with ARIA roles must have all required attributes for that role.
+
+<!--RULES_END-->
+
+## :couple: FAQ
+
+### What is the "Use the latest vue-eslint-parser" error?
+
+The most rules of `eslint-plugin-vue-a11y` require `vue-eslint-parser` to check `<template>` ASTs.
+
+Make sure you have one of the following settings in your **.eslintrc**:
+
+- `"extends": ["plugin:vue-a11y/recommended"]`
+- `"extends": ["plugin:vue-a11y/base"]`
+
+If you already use other parser (e.g. `"parser": "babel-eslint"`), please move it into `parserOptions`, so it doesn't collide with the `vue-eslint-parser` used by this plugin's configuration:
+
+```diff
+- "parser": "babel-eslint",
+  "parserOptions": {
++     "parser": "babel-eslint",
+      "ecmaVersion": 2017,
+      "sourceType": "module"
+  }
+```
+### Why doesn't it work on .vue file?
+
+1. Make sure you don't have `eslint-plugin-html` in your config. The `eslint-plugin-html` extracts the content from `<script>` tags, but `eslint-vue-plugin` requires `<script>` tags and `<template>` tags in order to distinguish template and script in single file components.
+
+  ```diff
+    "plugins": [
+      "vue",
+  -   "html"
+    ]
+  ```
