@@ -33,7 +33,10 @@ tester.run('aria-role', rule, {
     },
     {
       filename: 'test.vue',
-      code: '<template><Foo :role="role"></Foo></template>',
+      code: '<template><Foo role="maran"></Foo></template>',
+      options: [{
+        ignoreNonDOM: true
+      }]
     },
     {
       code: `
