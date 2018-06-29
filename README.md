@@ -53,6 +53,7 @@ Add `plugin:vue-a11y/base` in `extends`:
 ```
 <!--RULES_START-->
 ## base Supported Rules
+- [accessible-emoji](docs/rules/accessible-emoji.md): wrapping the emoji in a `<span>`, giving it the `role="img"`, and providing a useful description in `aria-label`
 - [alt-text](docs/rules/alt-text.md): Enforce all elements that require alternative text have meaningful information to relay back to end user.
 - [anchor-has-content](docs/rules/anchor-has-content.md): Enforce all anchors to contain accessible content.
 - [click-events-have-key-events](docs/rules/click-events-have-key-events.md): Enforce a clickable non-interactive element has at least one keyboard event listener.
