@@ -5,7 +5,7 @@ Enforce label tags have associated control.
 There are two supported ways to associate a label with a control:
 
 - nesting: by wrapping a control in a label tag
-- id: by using the prop `htmlFor` as in `htmlFor=[ID of control]`
+- id: by using the prop `for` as in `for=[ID of control]`
 
 To fully cover 100% of assistive devices, you're encouraged to validate for both nesting and id.
 
@@ -30,28 +30,9 @@ This rule takes one optional object argument of type object:
 For the `components` option, these strings determine which JSX elements (**always including** `<label>`) should be checked for having `htmlFor` prop. This is a good use case when you have a wrapper component that simply renders a `label` element (like in React):
 
 ```js
-// Label.js
-const Label = props => {
-  const {
-    htmlFor,
-    ...otherProps
-  } = props;
-
-  return (
-    <label htmlFor={htmlFor} {...otherProps} />
-  );
-}
-
-...
-
-// CreateAccount.js (for example)
-...
-return (
-  <form>
-    <input id="firstName" type="text" />
-    <Label htmlFor="firstName">First Name</Label>
+<form>
+    <label for="firstName">First Name<input id="firstName" type="text" /></label>
   </form>
-);
 ```
 
 The `required` option (defaults to `"required": { "every": ["nesting", "id"] }`) determines which checks are activated. You're allowed to pass in one of the following types:
@@ -70,36 +51,9 @@ The `allowChildren` option (defaults to `false`) determines whether `{children}`
 
 However, if `allowChildren` is set to `true`, no error will be raised. If you want to pass in `{children}` content without raising an error, because you cannot be sure what `{children}` will render, then set `allowChildren` to `true`.
 
-Note that passing props as spread attribute without `htmlFor` explicitly defined will cause this rule to fail. Explicitly pass down `htmlFor` prop for rule to pass. The prop must have an actual value to pass. Use `Label` component above as a reference. **It is a good thing to explicitly pass props that you expect to be passed for self-documentation.** For example:
-
-#### Bad
-```jsx
-function Foo(props) {
-  return <label {...props} />
-}
-```
-
-#### Good
-```jsx
-function Foo({ htmlFor, ...props}) {
-    return <label htmlFor={htmlFor} {...props} />
-}
-
-// OR
-
-function Foo(props) {
-    const {
-        htmlFor,
-        ...otherProps
-    } = props;
-
-   return <label htmlFor={htmlFor} {...otherProps} />
-}
-```
-
 ### Succeed
-```jsx
-<label htmlFor="firstName">
+```
+<label for="firstName">
   <input type="text" id="firstName" />
   First Name
 </label>

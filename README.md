@@ -51,13 +51,15 @@ Add `plugin:vue-a11y/base` in `extends`:
   ]
 }
 ```
+
+
 <!--RULES_START-->
 ## base Supported Rules
 - [accessible-emoji](docs/rules/accessible-emoji.md): wrapping the emoji in a `<span>`, giving it the `role="img"`, and providing a useful description in `aria-label`
 - [alt-text](docs/rules/alt-text.md): Enforce all elements that require alternative text have meaningful information to relay back to end user.
 - [anchor-has-content](docs/rules/anchor-has-content.md): Enforce all anchors to contain accessible content.
 - [click-events-have-key-events](docs/rules/click-events-have-key-events.md): Enforce a clickable non-interactive element has at least one keyboard event listener.
-- [label-has-for](docs/rules/label-has-for.md): Enforce that `<label>` elements have the `htmlFor` prop.
+- [label-has-for](docs/rules/label-has-for.md): Enforce that `<label>` elements nesting input and has id for it .
 - [mouse-events-have-key-events](docs/rules/mouse-events-have-key-events.md): Enforce that `onMouseOver`/`onMouseOut` are accompanied by `onFocus`/`onBlur` for keyboard-only users.
 - [no-autofocus](docs/rules/no-autofocus.md): Enforce autoFocus prop is not used.
 - [no-onchange](docs/rules/no-onchange.md): Enforce usage of `onBlur` over `onChange` on select menus for accessibility.
@@ -67,7 +69,7 @@ Add `plugin:vue-a11y/base` in `extends`:
 - [media-has-caption](docs/rules/media-has-caption.md): Providing captions for media is essential for deaf users to follow along. Captions should be a transcription or translation of the dialogue, sound effects, relevant musical cues, and other relevant audio information.
 - [iframe-has-title](docs/rules/iframe-has-title.md): `<iframe>` elements must have a unique title property to indicate its content to the user.
 - [no-access-key](docs/rules/no-access-key.md): Enforce no accessKey prop on element. Access keys are HTML attributes that allow web developers to assign keyboard shortcuts to elements. Inconsistencies between keyboard shortcuts and keyboard commands used by screenreader and keyboard only users create accessibility complications so to avoid complications, access keys should not be used.
-
+- [form-has-label](docs/rules/form-has-label.md): Each form element must have a programmatically associated label element. You can do so by using an implicit <label>, explicit <label>, aria-label or aria-labelledby.
 ## recommended Supported Rules
 
 - [interactive-supports-focus](docs/rules/interactive-supports-focus.md): Elements with an interactive role and interaction handlers (mouse or key press) must be focusable.
@@ -110,3 +112,13 @@ If you already use other parser (e.g. `"parser": "babel-eslint"`), please move i
   -   "html"
     ]
   ```
+
+### eslint-disable functionality in <template> ?
+Make sure you have used [eslint-plugin-vue](https://github.com/vuejs/eslint-plugin-vue) and you can use <!-- eslint-disable-line -->-like HTML comments in <template> of .vue files. For example:
+```
+<template>
+  <!-- eslint-disable-next-line vue-a11y/anchor-has-content -->
+  <a></a>
+  <h1></h1>  <!-- eslint-disable-line -->
+</template>
+```
