@@ -115,7 +115,7 @@ If you already use other parser (e.g. `"parser": "babel-eslint"`), please move i
 
 ### eslint-disable functionality in `<template>` ?
 
-1. Make sure you have used [eslint-plugin-vue](https://github.com/vuejs/eslint-plugin-vue) and you can use <!-- eslint-disable-line -->-like HTML comments in <template> of .vue files. For example:
+1. Make sure you have used [eslint-plugin-vue](https://github.com/vuejs/eslint-plugin-vue) and you can use <!-- eslint-disable-line --> like HTML comments in <template> of .vue files. For example:
 
 ```html
 <template>
