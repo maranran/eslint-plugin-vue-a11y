@@ -12,10 +12,10 @@ This rule takes no arguments.
 
 ### Succeed
 ```jsx
-<div />
+<div>Stress reliever</div>
 ```
 
 ### Fail
 ```jsx
-<div accessKey="h" />
+<div accesskey="s">Stress reliever</div>
 ```

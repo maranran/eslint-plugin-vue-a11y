@@ -26,9 +26,9 @@ tester.run('aria-props', rule, {
   ],
   invalid: [{
     filename: 'test.vue',
-    code: '<template><input aria-labeledby="address_label"></template>',
+    code: '<template><input aria-test="address_label"></template>',
     errors: [{
-      message: 'aria-labeledby: This attribute is an invalid ARIA attribute.'
+      message: 'aria-test: This attribute is an invalid ARIA attribute.'
     }]
   }, {
     code: `
@@ -40,7 +40,7 @@ tester.run('aria-props', rule, {
           },
         };`,
     errors: [{
-      message: 'aria-labeledby: This attribute is an invalid ARIA attribute. Did you mean to use aria-labelledby?' === 'aria-labeledby: This attribute is an invalid ARIA attribute.'
+      message: 'aria-labeledby: This attribute is an invalid ARIA attribute. Did you mean to use aria-labelledby?'
     }]
   }],
 });

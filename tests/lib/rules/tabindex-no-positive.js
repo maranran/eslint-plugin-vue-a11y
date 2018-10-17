@@ -5,7 +5,7 @@
 var rule = require('../../../lib/rules/tabindex-no-positive');
 var RuleTester = require('eslint').RuleTester;
 
-const errorMessage = '';
+const errorMessage = 'Avoid positive integer values for tabIndex.';
 var tester = new RuleTester({
   parser: 'vue-eslint-parser',
   parserOptions: {
