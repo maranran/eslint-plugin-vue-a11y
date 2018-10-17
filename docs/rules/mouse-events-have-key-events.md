@@ -7,19 +7,13 @@ Enforce onmouseenter/onmouseover/onmouseout/onmouseleave/onhover are accompanied
 This rule takes no arguments.
 
 ### Succeed
-```jsx
-<div onMouseOver={ () => void 0 } onFocus={ () => void 0 } />
-<div onMouseOut={ () => void 0 } onBlur={ () => void 0 } />
-<div onMouseOver={ () => void 0 } onFocus={ () => void 0 } {...otherProps} />
-<div onMouseOut={ () => void 0 } onBlur={ () => void 0 } {...otherProps} />
+```
+<div @mouseover="doSth" @focus="doSth"></div>
+<div @mouseout="doSth" @blur="doSth"></div>
 ```
 
 ### Fail
-In example 3 and 4 below, even if otherProps contains onBlur and/or onFocus, this rule will still fail. Props should be passed down explicitly for rule to pass.
 
 ```jsx
-<div onMouseOver={ () => void 0 } />
-<div onMouseOut={ () => void 0 } />
-<div onMouseOver={ () => void 0 } {...otherProps} />
-<div onMouseOut={ () => void 0 } {...otherProps} />
+<div @mouseover="doSth"></div>
 ```
