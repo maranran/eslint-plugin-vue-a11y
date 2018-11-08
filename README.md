@@ -98,7 +98,7 @@ If you already use other parser (e.g. `"parser": "babel-eslint"`), please move i
 - "parser": "babel-eslint",
   "parserOptions": {
 +     "parser": "babel-eslint",
-      "ecmaVersion": 2017,
+      "ecmaVersion": 2018,
       "sourceType": "module"
   }
 ```
