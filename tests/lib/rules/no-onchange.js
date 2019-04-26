@@ -16,7 +16,7 @@ const errorMessage = 'onBlur must be used instead of onchange, ' +
   'unless absolutely necessary and it causes no negative consequences ' +
   'for keyboard only or screen reader users.';
 
-tester.run('anchor-has-content', rule, {
+tester.run('no-onchange', rule, {
   valid: [
     {
       filename: 'test.vue',
@@ -43,7 +43,7 @@ tester.run('anchor-has-content', rule, {
   invalid: [
     {
       filename: 'test.vue',
-      code: '<template> <select @change="updateModel"><option /></select></template>',
+      code: '<template><select @change="updateModel"><option /></select></template>',
       errors: [{
         message: errorMessage
       }]
