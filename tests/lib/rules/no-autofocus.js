@@ -15,7 +15,7 @@ var tester = new RuleTester({
 const errorMessage =
   'The autoFocus prop should not be used, as it can reduce usability and accessibility for users.';
 
-tester.run('anchor-has-content', rule, {
+tester.run('no-autofocus', rule, {
   valid: [
     {
       filename: 'test.vue',
