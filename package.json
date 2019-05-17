@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-vue-a11y",
-  "version": "0.0.27",
+  "version": "0.0.29",
   "description": "Static AST checker for accessibility rules on elements in .vue",
   "keywords": [
     "eslint",
@@ -30,10 +30,10 @@
     "aria-query": "^0.7.1",
     "chai": "^4.1.0",
     "emoji-regex": "^7.0.0",
-    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-vue": "^4.4.0",
     "jsx-ast-utils": "^2.0.1",
-    "vue-eslint-parser": "^2.0.3"
+    "vue-eslint-parser": "^6.0.4"
   },
   "devDependencies": {
     "eslint": "^5.2.0",

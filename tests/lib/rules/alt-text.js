@@ -64,7 +64,8 @@ tester.run('alt-text', rule, {
           },
         };
       `
-    }],
+    }
+  ],
   invalid: [
       {
         filename: 'test.vue',

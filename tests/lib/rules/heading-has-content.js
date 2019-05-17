@@ -21,7 +21,7 @@ var tester = new RuleTester({
 
 tester.run('heading-has-content', rule, {
   valid: [
-    { 
+    {
       filename: 'test.vue',
       code: '<template><h1 v-text="msg"></h1></template>',
     },
@@ -30,24 +30,26 @@ tester.run('heading-has-content', rule, {
       code: '<template><h1><span>test</span></h1></template>',
     },
   ],
-  invalid: [{
-    filename: 'test.vue',
-    code: '<template><h1></h1></template>',
-    errors: [{
-      message: errorMessage
-    }]
-  },{
-    code: `
-        export default {
-          render (h) {
-            return (
-             <h2></h2>
-            )
-          },
-        }
-      `,
-    errors: [{
-      message: errorMessage
-    }]
-  }],
+  invalid: [
+    {
+      filename: 'test.vue',
+      code: '<template><h1></h1></template>',
+      errors: [{
+        message: errorMessage
+      }]
+    },{
+      code: `
+          export default {
+            render (h) {
+              return (
+               <h2></h2>
+              )
+            },
+          }
+        `,
+      errors: [{
+        message: errorMessage
+      }]
+    }
+  ],
 });
