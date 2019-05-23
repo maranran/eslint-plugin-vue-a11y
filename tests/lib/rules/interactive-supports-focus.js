@@ -29,6 +29,10 @@ tester.run('interactive-supports-focus', rule, {
     },
     {
       filename: 'test.vue',
+      code: '<template><span @click="doSomething();" :tabindex="tabindex" role="button">Click me!</span></template>',
+    },
+    {
+      filename: 'test.vue',
       code: '<template><span @click="doSomething();" role="presentation">Click me!</span></template>',
     },
     {

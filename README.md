@@ -41,7 +41,8 @@ Then configure the rules you want to use under the rules section.
     }
 }
 ```
-You can also enable all the base rules at once.
+
+also You can  enable all the base rules at once.
 Add `plugin:vue-a11y/base` in `extends`:
 
 ```json

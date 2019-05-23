@@ -44,6 +44,10 @@ tester.run('label-has-for', rule, {
     },
     {
       filename: 'test.vue',
+      code: '<template><label :for="id"><input type="text" :id="id" /></label></template>',
+    },
+    {
+      filename: 'test.vue',
       code: '<template><label>name</label></template>',
       options: [
         {
