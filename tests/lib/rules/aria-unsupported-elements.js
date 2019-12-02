@@ -19,7 +19,7 @@ var tester = new RuleTester({
 
 tester.run('aria-unsupported-elements', rule, {
   valid: [
-    { 
+    {
       filename: 'test.vue',
       code: '<template><html></html></template>',
     },
@@ -28,8 +28,7 @@ tester.run('aria-unsupported-elements', rule, {
     filename: 'test.vue',
     code: '<template><meta charset="UTF-8" aria-hidden="false" /></template>',
     errors: [{
-      message: `This element does not support ARIA roles, states and properties.
-               Try removing the prop 'aria-hidden'.`
+      message: `This element does not support ARIA roles, states and properties. Try removing the prop 'aria-hidden'.`
     }]
   }],
 });

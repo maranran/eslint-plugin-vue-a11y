@@ -19,7 +19,7 @@ var tester = new RuleTester({
 
 tester.run('aria-props', rule, {
   valid: [
-    { 
+    {
       filename: 'test.vue',
       code: '<template><input aria-labelledby="address_label"></template>',
     },
@@ -28,7 +28,7 @@ tester.run('aria-props', rule, {
     filename: 'test.vue',
     code: '<template><input aria-test="address_label"></template>',
     errors: [{
-      message: 'aria-test: This attribute is an invalid ARIA attribute.'
+      message: "Attribute 'aria-test' is an invalid ARIA attribute."
     }]
   }, {
     code: `
