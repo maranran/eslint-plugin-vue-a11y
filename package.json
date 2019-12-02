@@ -17,7 +17,7 @@
     "lint": "eslint ."
   },
   "homepage": "https://github.com/maranran/eslint-plugin-vue-a11y#readme",
-  "repository": "https://github.com/maranran/eslint-plugin-vue-a11y.git"
+  "repository": "https://github.com/maranran/eslint-plugin-vue-a11y.git",
   "files": [
     "lib"
   ],
